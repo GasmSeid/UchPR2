@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ПРАКТИЧЕСКАЯ РАБОТА №2</title>
+</head>
+<body>
+<div th:insert="Blocks/Header"></div>
+<h1>Автомобили</h1>
+<a href="/Search/Cars"> Поиск авто</a>
+<a href="/Add/Cars"> Добавить авто</a>
+<div th:each="el : ${Cars}">
+    <h3 th:text="${el.getCarBrand()}" ></h3>
+    <p th:text="${el.getCarsmodel()}"></p>
+    <p th:text="${el.getYear_release()}"></p>
+    <p th:text="${el.getColor()}"></p>
+    <p th:text="${el.getVIN()}"></p>
+    <p th:text="${el.getHorsepower()}"></p>
+    <p th:text="${el.getEngine_capacity()}"></p>
+</div>
+</body>
+</html>
+

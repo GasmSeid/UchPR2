@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ПРАКТИЧЕСКАЯ РАБОТА №2</title>
+</head>
+<body>
+<h2>Поиск автомобиля</h2>
+<form method="post" th:action="${'/Search/Cars-result'}">
+    <input type="text" name="carsmodel"><br>
+    <button type="submit">Точное сопадение</button>
+</form>
+    <form method="post" th:action="${'/Search/Cars'}">
+        <input type="text" name="carsmodel"><br>
+        <button type="submit">Не точное сопадение</button>
+    </form>
+    <tbody>
+    <tr th:each="el : ${result}">
+        <h3 th:text="${el.getCarBrand()}" ></h3>
+        <p th:text="${el.getCarsmodel()}"></p>
+        <p th:text="${el.getYear_release()}"></p>
+        <p th:text="${el.getColor()}"></p>
+        <p th:text="${el.getVIN()}"></p>
+        <p th:text="${el.getHorsepower()}"></p>
+        <p th:text="${el.getEngine_capacity()}"></p>
+    </tr>
+    </tbody>
+</body>
+</html>

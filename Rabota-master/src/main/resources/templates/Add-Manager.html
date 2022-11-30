@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ПРАКТИЧЕСКАЯ РАБОТА №2</title>
+</head>
+<body>
+<form th:action = "${'/Add/Manager'}" method="post">
+    <input type="text" name="surname" placeholder="Фамилия"><br> <br>
+    <input type="text" name="name" placeholder="Имя"><br> <br>
+    <input type="text" name="middlename" placeholder="Отчество"></input>   <br> <br>
+    <input type="date" name="bthday" placeholder="Дата рождения"></input><br> <br>
+    <input type="text" name="SeriaPass" placeholder="Серия паспорта"></input><br> <br>
+    <input type="text" name="NomPass" placeholder="Номер паспорта"></input><br> <br>
+    <input type="text" name="AdresReg" placeholder="Адрес регистрации"></input><br> <br>
+    <input type="text" name="Email" placeholder="Email"></input><br> <br>
+    <button type="submit"> Добавить сотрудника</button>
+</form>
+</body>
+</html>

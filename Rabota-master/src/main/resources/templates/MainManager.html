@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ПРАКТИЧЕСКАЯ РАБОТА</title>
+</head>
+<body>
+<div th:insert="Blocks/Header"></div>
+<h1>Сотрудники</h1>
+<a href="/Search/Manager"> Поиск сотрудника</a>
+<a href="/Add/Manager"> Добавить сотрудника</a>
+<div th:each="el : ${Manager}">
+    <h3 th:text="${el.getSurname()}" ></h3>
+    <p th:text="${el.getName()}"></p>
+    <p th:text="${el.getMiddlename()}"></p>
+    <p th:text="${el.getBthday()}"></p>
+    <p th:text="${el.getSeriaPass()}"></p>
+    <p th:text="${el.getNomPass()}"></p>
+    <p th:text="${el.getAdresReg()}"></p>
+    <p th:text="${el.getEmail()}"></p>
+</div>
+</body>
+</html>
